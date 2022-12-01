@@ -17,11 +17,11 @@ public class Code {
           if (currentCalorie > highestCalorie) {
             highestCalorie = currentCalorie;
           }
-          else if (currentCalorie > secondhighestCalorie) {
-            secondhighestCalorie = currentCalorie;
+          else if (currentCalorie > secondHighestCalorie) {
+            secondHighestCalorie = currentCalorie;
           }
-          else if (currentCalorie > thirdhighestCalorie) {
-            thirdhighestCalorie = currentCalorie;
+          else if (currentCalorie > thirdHighestCalorie) {
+            thirdHighestCalorie = currentCalorie;
           }
           currentCalorie = 0;
         }
@@ -29,7 +29,7 @@ public class Code {
           currentCalorie += Integer.parseInt(line);
         }
       }
-      System.out.println(highestCalorie + secondhighestCalorie + thirdhighestCalorie);
+      System.out.println(highestCalorie + secondHighestCalorie + thirdHighestCalorie);
     }
     catch (FileNotFoundException e) {
 
