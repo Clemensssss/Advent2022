@@ -9,11 +9,19 @@ public class Code {
       Scanner input = new Scanner(f);
       int currentCalorie = 0;
       int highestCalorie = 0;
+      int secondHighestCalorie = 0;
+      int thirdHighestCalorie = 0;
       while (input.hasNextLine()) {
         String line = input.nextLine();
         if (line.equals("")) {
           if (currentCalorie > highestCalorie) {
             highestCalorie = currentCalorie;
+          }
+          else if (currentCalorie > secondhighestCalorie) {
+            secondhighestCalorie = currentCalorie;
+          }
+          else if (currentCalorie > thirdhighestCalorie) {
+            thirdhighestCalorie = currentCalorie;
           }
           currentCalorie = 0;
         }
@@ -21,7 +29,7 @@ public class Code {
           currentCalorie += Integer.parseInt(line);
         }
       }
-      System.out.println(highestCalorie);
+      System.out.println(highestCalorie + secondhighestCalorie + thirdhighestCalorie);
     }
     catch (FileNotFoundException e) {
 
